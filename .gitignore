@@ -1,3 +1,8 @@
 node_modules/
 dist/
 .env
+
+# Ignore package configuration files
+package.json
+package-lock.json
+tsconfig.json
