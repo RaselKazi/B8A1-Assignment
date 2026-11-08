@@ -1,4 +1,4 @@
-export function multiplyValue(value: number, multiplier?: number): number {
+function multiplyValue(value: number, multiplier?: number): number {
   if (multiplier === undefined) {
     return value * 2;
   }
@@ -12,7 +12,7 @@ type InputType = string | number | boolean;
 
 type OutputType = string | number;
 
-export function processInput(input: InputType): OutputType {
+function processInput(input: InputType): OutputType {
   if (typeof input === "string") {
     return input.trim().toLowerCase();
   }
@@ -30,7 +30,7 @@ export function processInput(input: InputType): OutputType {
 
 type Coordinate = readonly [number, number, string];
 
-export function formatCoordinate(coordinate: Coordinate): string {
+function formatCoordinate(coordinate: Coordinate): string {
   const latitude = coordinate[0];
   const longitude = coordinate[1];
   const locationName = coordinate[2];
@@ -38,7 +38,7 @@ export function formatCoordinate(coordinate: Coordinate): string {
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-export function concatenateArrays<T>(...arrays: T[][]): T[] {
+function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
 
   for (const currentArray of arrays) {
@@ -50,16 +50,13 @@ export function concatenateArrays<T>(...arrays: T[][]): T[] {
   return result;
 }
 
-export interface Course {
+interface Course {
   title: string;
   students: number;
   isPublished: boolean;
 }
 
-export function getPopularCourses(
-  courses: Course[],
-  minStudents: number,
-): Course[] {
+function getPopularCourses(courses: Course[], minStudents: number): Course[] {
   const popularCourses: Course[] = [];
 
   for (const course of courses) {
@@ -71,7 +68,7 @@ export function getPopularCourses(
   return popularCourses;
 }
 
-export function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
+function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   const result: T[K][] = [];
 
   for (const item of items) {
@@ -81,7 +78,7 @@ export function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
   return result;
 }
 
-export class Employee {
+class Employee {
   protected name: string;
   private baseSalary: number;
 
@@ -95,7 +92,7 @@ export class Employee {
   }
 }
 
-export class Manager extends Employee {
+class Manager extends Employee {
   private department: string;
 
   constructor(name: string, baseSalary: number, department: string) {
@@ -108,7 +105,7 @@ export class Manager extends Employee {
   }
 }
 
-export function validateAgeAsync(age: number): Promise<string> {
+function validateAgeAsync(age: number): Promise<string> {
   return new Promise((resolve, reject) => {
     if (age < 18) {
       reject(new Error("Access Denied: Must be 18 or older"));

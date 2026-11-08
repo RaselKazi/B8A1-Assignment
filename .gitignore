@@ -8,3 +8,5 @@ package-lock.json
 tsconfig.json
 index.html
 index.ts
+pnpm-workspace.yaml
+pnpm-lock.yaml
