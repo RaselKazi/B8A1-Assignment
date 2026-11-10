@@ -1,17 +1,18 @@
-# Type vs Interface in TypeScript: What's the Difference?
+# Type vs Interface in TypeScript: Whats the Difference?
 
-## Introduction
+##
 
-Type aliases and interfaces are used to define custom types in TypeScript. both `type` and `interface` help describe the structure of data. This blog will discuss the similarities and differences between them, and the best use cases for each. Let's dive in!.
+Type aliases and interfaces are both used to define custom types in TypeScript. Both `type` and `interface` help describe the shape of data. This blog will go over the similarities and differences between them. When to use each one. Lets get started.
 
-- **Type Aliases:** are suitable for unions, tuples, primitive types, function types, and object types.
-- **Interfaces:** are primarily designed for defining object shapes and support extension and declaration merging.
+- **Type Aliases:** work with unions, tuples, primitive types, function types and object types.
 
-## Three Important Differences Between Type and Interface
+- **Interfaces:** are mainly used for defining the shape of objects and support extension and declaration merging.
+
+## Three Differences Between Type and Interface
 
 ## 1. Extending
 
-We can extend an interface using `extends`.
+You can extend an interface using the `extends` keyword.
 
 ```ts
 interface Animal {
@@ -23,7 +24,7 @@ interface Dog extends Animal {
 }
 ```
 
-With `type`, we use `&` (intersection).
+With `type` you use the `&` operator (intersection).
 
 ```ts
 type Animal = {
@@ -35,11 +36,11 @@ type Dog = Animal & {
 };
 ```
 
-Both can be extended, but interfaces support declaration merging.
+Both can be extended,. Only interfaces support declaration merging.
 
 ### 2. Declaration Merging
 
-Interfaces with the same name are automatically merged.
+When you have two interfaces with the name they are automatically merged.
 
 ```ts
 interface Student {
@@ -51,14 +52,15 @@ interface Student {
 }
 ```
 
-Now, `Student` contains both `name` and `age` properties.
+Now the `Student` type has both `name` and `age` properties.
 
-However, you cannot declare two type aliases with the same name.
+You cannot define two type aliases with the same name. That would cause an error.
 
 ### 3. What They Can Describe
 
-- `interface`: are cleaner and more readable for object structures.
-- `type`: Describes objects, strings, numbers, unions, tuples, and more.
+- `interface`: works best for describing object shapes. It's clean and easy to read.
+
+- `type`: can describe objects, strings, numbers, unions, tuples and many other types.
 
 ## 4. When Should You Use Them?
 
@@ -71,6 +73,6 @@ However, you cannot declare two type aliases with the same name.
 | Tuples               | `type`      |
 | Declaration merging  | `interface` |
 
-## Conclusion
+##
 
-Think of `interface` as a way to describe object structures and `type` as a more flexible tool for defining different kinds of data.
+Think of `interface` as a way to describe the structure of objects. Think of `type`, as a flexible tool that can define many kinds of data. Choose based on what you're trying to do.
