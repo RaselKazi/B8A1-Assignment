@@ -1,12 +1,13 @@
 # Access Modifiers in TypeScript OOP
 
-Access modifiers control who can access a class's properties and methods. Think of a school: some information is available to everyone, some is private, and some is shared only with family members.
+In TypeScript, Access modifiers control who can read or change the properties and methods of a class. “Access Modifiers.. Let's say you're in a school: some information is available to everyone, some is private, and some is shared only with family members.
 
-TypeScript has four important keywords: `public`, `private`, `protected`, and `readonly`.
+TypeScript has four Access modifiers: `public`, `private`, `protected`, and `readonly`.
+In this blog, I explain how each one works with simple examples.
 
-## 1. Public – Everyone Can Access
+## 1. Public – Can be accessed from anywhere
 
-`public` allows a property or method to be accessed from both inside and outside the class.
+`public` allows a property or method to be accessed from both inside and outside the class. It is the default modifier
 
 ```ts
 class Student {
@@ -18,11 +19,11 @@ const student = new Student();
 console.log(student.name); // Rasel
 ```
 
-**Think of it like:** A school notice board that everyone can read.
+**Just like:** A school notice board that everyone can read.
 
-## 2. Private – Only the Same Class Can Access
+## 2. Private – Accessible only inside the class
 
-`private` allows a property or method to be accessed only within the class where it is declared.
+`private` allows a property or method to be accessed only within the class where they are defined. It cannot be accessed from outside the class.
 
 ```ts
 class BankAccount {
@@ -39,7 +40,7 @@ console.log(account.showBalance()); // 1000
 // console.log(account.balance); // Error
 ```
 
-**Think of it like:** A personal diary that only you can read.
+**Just like:** Your own personal diary that only you can read.
 
 ## 3. Protected – Parent and Child Classes Can Access
 
@@ -62,11 +63,11 @@ console.log(manager.showName()); // Rasel
 // console.log(manager.name); // Error
 ```
 
-**Think of it like:** A family secret that parents can share with their children, but not with outsiders.
+**Just like:** A family secret parents can share with their children, but not others.
 
-## 4. Readonly – Cannot Be Reassigned
+## 4. Readonly – Cannot be changed
 
-`readonly` allows a property to be read but prevents it from being reassigned after initialization.
+`readonly` allows a property to be read but its value cannot be changed after initialization.
 
 ```ts
 class User {
@@ -79,7 +80,7 @@ console.log(user.id); // 101
 // user.id = 202; // Error
 ```
 
-**Think of it like:** A school registration number that cannot be changed.
+**Just like:** A school registration number that cannot be changed.
 
 ## Quick Comparison
 
@@ -99,4 +100,4 @@ console.log(user.id); // 101
 - `protected`: Accessible within the declaring class and its subclasses.
 - `readonly`: Prevents a property from being reassigned after initialization.
 
-Access modifiers help control how class members are used, making code easier to understand and maintain.
+Access modifiers help control how class members are used, making code easier to understand,cleaner, and easier to maintain.

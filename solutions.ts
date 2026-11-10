@@ -28,9 +28,9 @@ function processInput(input: InputType): OutputType {
   return "Inactive";
 }
 
-type Coordinate = readonly [number, number, string];
+type CoordinateType = readonly [number, number, string];
 
-function formatCoordinate(coordinate: Coordinate): string {
+function formatCoordinate(coordinate: CoordinateType): string {
   const latitude = coordinate[0];
   const longitude = coordinate[1];
   const locationName = coordinate[2];
