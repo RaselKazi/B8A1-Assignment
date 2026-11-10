@@ -1,41 +1,39 @@
-# B8A1 — Problem Solving with TypeScript & OOP
+# B8A1 — TypeScript and OOP Assignment
 
-This repository contains solutions for the B8A1 assignment covering TypeScript fundamentals, generics, type narrowing, asynchronous programming, and object-oriented programming.
+This repository contains my solutions for the B8A1 TypeScript assignment.
 
-## Project structure
+In this project, I practice important TypeScript topics like functions, arrays, generics, promises, and object-oriented programming (OOP).
+
+## Project Structure
 
 ```text
 .
 ├── solutions.ts
+├── access-modifiers.md
 ├── type-vs-interface.md
-├── type-narrowing.md
 └── README.md
 ```
 
-## Requirements
+## Problems I Worked On
 
-- Node.js (LTS recommended)
-- TypeScript
+1. `multiplyValue` — Multiply a number using a default multiplier of 2.
+2. `processInput` — Work with strings, numbers, and booleans.
+3. `formatCoordinate` — Create a location message using coordinates.
+4. `concatenateArrays` — Join multiple arrays using generics.
+5. `Course` and `getPopularCourses` — Find popular and published courses.
+6. `pluckValues` — Get a specific property from objects using generics.
+7. `Employee` and `Manager` — Practice classes, inheritance, and access modifiers.
+8. `validateAgeAsync` — Check a person's age using a Promise.
 
-## Implemented problems
+## My Technical Blogs
 
-1. `multiplyValue` — optional multiplier with a default of `2`.
-2. `processInput` — union types and `typeof` narrowing.
-3. `formatCoordinate` — readonly coordinate tuple.
-4. `concatenateArrays` — generic rest parameters.
-5. `Course` and `getPopularCourses` — interface and non-mutating filtering.
-6. `pluckValues` — generic property selection with `keyof`.
-7. `Employee` and `Manager` — inheritance and access modifiers.
-8. `validateAgeAsync` — Promise resolution and rejection.
+I also wrote two blogs to explain TypeScript concepts in simple words.
 
-## Technical blogs
-
+- [Access Modifiers](./access-modifiers.md)
 - [Type vs Interface](./type-vs-interface.md)
-- [Type Narrowing](./type-narrowing.md)
 
 ## Notes
 
-The assignment's coding-requirements section also names `getUniqueNumbers`, `Product`, and `updateProductPrice`, but the problem descriptions do not define their signatures or expected behavior. They are intentionally not guessed here. Confirm the missing specifications with the instructor before adding implementations.
+All problem solutions are kept in one file named `solutions.ts`.
 
-All required problem solutions are in the single `solutions.ts` file. No `any`, sample calls, or `console.log` statements are used in that submission file.
-'''
+I have avoided using `any`, sample function calls, and `console.log` statements in the submission file.
